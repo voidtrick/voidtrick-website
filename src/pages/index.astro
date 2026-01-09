@@ -3,7 +3,11 @@ import Layout from '@layouts/Layout.astro';
 import links from '@content/links.json';
 import Link from '@components/Link.astro';
 
-const mainLinks = links.mainLinks;
+const socialLinks = links.social;
+const devLinks = links.dev;
+const mediaLinks = links.media;
+const supportLinks = links.support;
+const communityLinks = links.community;
 ---
 
 <style>
@@ -28,9 +32,70 @@ const mainLinks = links.mainLinks;
 <Layout title='Voidtrick'>
   <h1>Voidtrick</h1>
   <p>Hello, world.</p>
+  <h3>Social</h3>
   <ul>
     {
-      mainLinks.map((link) => (
+      socialLinks.map((link) => (
+        <li>
+          <Link
+            url={link.url}
+            label={link.label}
+            external={link.external}
+            icon={link.icon}
+          />
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Media</h3>
+  <ul>
+    {
+      mediaLinks.map((link) => (
+        <li>
+          <Link
+            url={link.url}
+            label={link.label}
+            external={link.external}
+            icon={link.icon}
+          />
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Development</h3>
+  <ul>
+    {
+      devLinks.map((link) => (
+        <li>
+          <Link
+            url={link.url}
+            label={link.label}
+            external={link.external}
+            icon={link.icon}
+          />
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Community</h3>
+  <ul>
+    {
+      communityLinks.map((link) => (
+        <li>
+          <Link
+            url={link.url}
+            label={link.label}
+            external={link.external}
+            icon={link.icon}
+          />
+        </li>
+      ))
+    }
+  </ul>
+  <h3>Support</h3>
+  <ul>
+    {
+      supportLinks.map((link) => (
         <li>
           <Link
             url={link.url}
