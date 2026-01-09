@@ -7,6 +7,7 @@ import '@styles/montserrat.css';
 import { Image } from 'astro:assets';
 import bgDark from '@assets/images/bg-dark.jpg';
 import bgLight from '@assets/images/bg-light.jpg';
+import Footer from '@/components/Footer.astro';
 
 const { title = 'Voidtrick' } = Astro.props;
 ---
@@ -39,5 +40,6 @@ const { title = 'Voidtrick' } = Astro.props;
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

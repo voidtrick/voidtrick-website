@@ -18,6 +18,9 @@ const communityLinks = links.community;
 
     max-width: 22rem;
     width: 100%;
+
+    scroll-padding-block: 4rem;
+    scroll-margin-block: 4rem;
   }
 
   ul {
@@ -92,8 +95,8 @@ const communityLinks = links.community;
     z-index: -1;
 
     background-color: var(--clr-base);
-    opacity: 0.6;
-    backdrop-filter: blur(12px);
+    /* opacity: 0.6; */
+    /* backdrop-filter: blur(12px); */
   }
 
   div.hero {
@@ -104,6 +107,7 @@ const communityLinks = links.community;
 
     width: 100%;
     max-width: fit-content;
+    height: 100vh;
   }
 
   hr.hero-hr {
@@ -122,7 +126,39 @@ const communityLinks = links.community;
     font-size: 1.4rem;
 
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--clr-base);
+
+    width: 100%;
+    max-width: 16rem;
+
+    color: var(--clr-text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    padding-block: 0.8rem;
+    padding-inline: 1rem;
+
+    border-radius: 999px;
+    outline: 2px solid var(--clr-surface-0);
+
+    transition-property: background-color, color, outline;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .btn:hover {
+    background-color: var(--clr-surface-0);
+    outline: 2px solid var(--clr-surface-1);
+    color: var(--clr-primary);
   }
 </style>
 
@@ -131,8 +167,9 @@ const communityLinks = links.community;
     <h1>Voidtrick</h1>
     <hr class='hero-hr' />
     <p>Hello, world.</p>
+    <a href='#links' class='btn'>View Links</a>
   </div>
-  <section>
+  <section id='links'>
     <div class='link-group'>
       <h3>
         <i class='link-group-header-icon ri-chat-quote-fill'></i><span
