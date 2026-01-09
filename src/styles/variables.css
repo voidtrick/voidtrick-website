@@ -1,63 +1,132 @@
-:root {
-  /* Colors based on the Catppuccin theme. */
-  /* https://catppuccin.com/palette/ */
+/* Colors based on the Catppuccin theme. */
+/* https://catppuccin.com/palette/ */
 
-  /*** Base Colors ***/
-  --clr-rosewater: hsl(10deg, 56%, 91%);
-  --clr-flamingo: hsl(0deg, 59%, 88%);
-  --clr-pink: hsl(316deg, 72%, 86%);
-  --clr-mauve: hsl(267deg, 84%, 81%);
-  --clr-red: hsl(343deg, 81%, 75%);
-  --clr-maroon: hsl(350deg, 65%, 77%);
-  --clr-peach: hsl(23deg, 92%, 75%);
-  --clr-yellow: hsl(41deg, 86%, 83%);
-  --clr-green: hsl(115deg, 54%, 76%);
-  --clr-teal: hsl(170deg, 57%, 73%);
-  --clr-sky: hsl(189deg, 71%, 73%);
-  --clr-sapphire: hsl(199deg, 76%, 69%);
-  --clr-blue: hsl(217deg, 92%, 76%);
-  --clr-lavender: hsl(232deg, 97%, 85%);
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
 
-  --clr-text: hsl(226deg, 64%, 88%);
-  --clr-subtext-1: hsl(227deg, 35%, 80%);
-  --clr-subtext-2: hsl(228deg, 24%, 72%);
+    /*** Base Colors ***/
+    --clr-rosewater: hsl(10deg, 56%, 91%);
+    --clr-flamingo: hsl(0deg, 59%, 88%);
+    --clr-pink: hsl(316deg, 72%, 86%);
+    --clr-mauve: hsl(267deg, 84%, 81%);
+    --clr-red: hsl(343deg, 81%, 75%);
+    --clr-maroon: hsl(350deg, 65%, 77%);
+    --clr-peach: hsl(23deg, 92%, 75%);
+    --clr-yellow: hsl(41deg, 86%, 83%);
+    --clr-green: hsl(115deg, 54%, 76%);
+    --clr-teal: hsl(170deg, 57%, 73%);
+    --clr-sky: hsl(189deg, 71%, 73%);
+    --clr-sapphire: hsl(199deg, 76%, 69%);
+    --clr-blue: hsl(217deg, 92%, 76%);
+    --clr-lavender: hsl(232deg, 97%, 85%);
 
-  --clr-overlay-2: hsl(228deg, 17%, 64%);
-  --clr-overlay-1: hsl(230deg, 13%, 55%);
-  --clr-overlay-0: hsl(231deg, 11%, 47%);
+    --clr-text: hsl(226deg, 64%, 88%);
+    --clr-subtext-1: hsl(227deg, 35%, 80%);
+    --clr-subtext-2: hsl(228deg, 24%, 72%);
 
-  --clr-surface-2: hsl(233deg, 12%, 39%);
-  --clr-surface-1: hsl(234deg, 13%, 31%);
-  --clr-surface-0: hsl(237deg, 16%, 23%);
+    --clr-overlay-2: hsl(228deg, 17%, 64%);
+    --clr-overlay-1: hsl(230deg, 13%, 55%);
+    --clr-overlay-0: hsl(231deg, 11%, 47%);
 
-  --clr-base: hsl(240deg, 21%, 15%);
-  --clr-mantle: hsl(240deg, 21%, 12%);
-  --clr-crust: hsl(240deg, 23%, 9%);
+    --clr-surface-2: hsl(233deg, 12%, 39%);
+    --clr-surface-1: hsl(234deg, 13%, 31%);
+    --clr-surface-0: hsl(237deg, 16%, 23%);
 
-  /*** UI Colors ***/
-  --clr-primary: var(--clr-blue);
-  --clr-secondary: var(--clr-teal);
-  --clr-tertiary: var(--clr-lavender);
+    --clr-base: hsl(240deg, 21%, 15%);
+    --clr-mantle: hsl(240deg, 21%, 12%);
+    --clr-crust: hsl(240deg, 23%, 9%);
 
-  --clr-success: var(--clr-green);
-  --clr-warning: var(--clr-yellow);
-  --clr-error: var(--clr-red);
+    /*** UI Colors ***/
+    --clr-primary: var(--clr-blue);
+    --clr-secondary: var(--clr-teal);
+    --clr-tertiary: var(--clr-lavender);
 
-  /*** Gradients ***/
-  --clr-primary-gradient: rgba(138, 173, 244, 0.2);
-  --clr-tertiary-gradient: rgba(198, 160, 246, 0.2);
+    --clr-success: var(--clr-green);
+    --clr-warning: var(--clr-yellow);
+    --clr-error: var(--clr-red);
 
-  --clr-gradient-bg: radial-gradient(
-      circle at 0% 0%,
-      var(--clr-tertiary-gradient) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 98% 1%,
-      var(--clr-primary-gradient) 0%,
-      transparent 50%
-    ),
-    var(--clr-mantle);
+    /*** Gradients ***/
+    --clr-primary-gradient: rgba(138, 173, 244, 0.2);
+    --clr-tertiary-gradient: rgba(198, 160, 246, 0.2);
 
-  --bg-pattern-opacity: 1;
+    --clr-gradient-bg: radial-gradient(
+        circle at 0% 0%,
+        var(--clr-tertiary-gradient) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 98% 1%,
+        var(--clr-primary-gradient) 0%,
+        transparent 50%
+      ),
+      var(--clr-mantle);
+
+    --bg-pattern-opacity: 1;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+
+    /*** Base Colors ***/
+    --clr-rosewater: hsl(11deg, 59%, 67%);
+    --clr-flamingo: hsl(0deg, 60%, 67%);
+    --clr-pink: hsl(316deg, 73%, 69%);
+    --clr-mauve: hsl(266deg, 85%, 58%);
+    --clr-red: hsl(347deg, 87%, 44%);
+    --clr-maroon: hsl(355deg, 76%, 59%);
+    --clr-peach: hsl(22deg, 99%, 52%);
+    --clr-yellow: hsl(35deg, 77%, 49%);
+    --clr-green: hsl(109deg, 58%, 40%);
+    --clr-teal: hsl(183deg, 74%, 35%);
+    --clr-sky: hsl(197deg, 97%, 46%);
+    --clr-sapphire: hsl(189deg, 70%, 42%);
+    --clr-blue: hsl(220deg, 91%, 54%);
+    --clr-lavendar: hsl(231deg, 97%, 72%);
+
+    --clr-text: hsl(234deg, 16%, 35%);
+    --clr-subtext-1: hsl(233deg, 13%, 41%);
+    --clr-subtext-0: hsl(233deg, 10%, 47%);
+
+    --clr-overlay-2: hsl(232deg, 10%, 53%);
+    --clr-overlay-1: hsl(231deg, 10%, 59%);
+    --clr-overlay-0: hsl(228deg, 11%, 65%);
+
+    --clr-surface-2: hsl(227deg, 12%, 71%);
+    --clr-surface-1: hsl(225deg, 14%, 77%);
+    --clr-surface-0: hsl(223deg, 16%, 83%);
+
+    --clr-base: hsl(220deg, 23%, 95%);
+    --clr-mantle: hsl(220deg, 22%, 92%);
+    --clr-crust: hsl(220deg, 21%, 89%);
+
+    /*** UI Colors ***/
+    --clr-primary: var(--clr-blue);
+    --clr-secondary: var(--clr-teal);
+    --clr-tertiary: var(--clr-lavender);
+
+    --clr-success: var(--clr-green);
+    --clr-warning: var(--clr-yellow);
+    --clr-error: var(--clr-red);
+
+    /*** Gradients ***/
+    --clr-primary-gradient: rgba(30, 102, 245, 0.2);
+    --clr-tertiary-gradient: rgba(136, 57, 239, 0.175);
+
+    --clr-gradient-bg: radial-gradient(
+        circle at 0% 0%,
+        var(--clr-tertiary-gradient) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 98% 1%,
+        var(--clr-primary-gradient) 0%,
+        transparent 50%
+      ),
+      var(--clr-mantle);
+
+    --bg-pattern-opacity: 0.4;
+  }
 }
