@@ -23,6 +23,12 @@
       "url": "https://www.threads.com/@voidtricknet",
       "icon": "ri-threads-fill",
       "external": true
+    },
+    {
+      "label": "Reddit",
+      "url": "https://www.reddit.com/user/voidtricknet/",
+      "icon": "ri-reddit-fill",
+      "external": true
     }
   ],
   "media": [
@@ -70,6 +76,12 @@
       "label": "Patreon",
       "url": "https://www.patreon.com/cw/voidtrick",
       "icon": "ri-patreon-fill",
+      "external": true
+    },
+    {
+      "label": "Kofi",
+      "url": "https://ko-fi.com/voidtrick",
+      "icon": "ri-heart-3-fill",
       "external": true
     }
   ],
