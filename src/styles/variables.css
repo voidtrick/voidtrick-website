@@ -90,17 +90,17 @@
     --clr-subtext-1: hsl(233deg, 13%, 41%);
     --clr-subtext-0: hsl(233deg, 10%, 47%);
 
-    --clr-overlay-2: hsl(232deg, 10%, 53%);
-    --clr-overlay-1: hsl(231deg, 10%, 59%);
-    --clr-overlay-0: hsl(228deg, 11%, 65%);
+    --clr-overlay-2: hsl(232deg, 10%, 66%);
+    --clr-overlay-1: hsl(231deg, 10%, 72%);
+    --clr-overlay-0: hsl(228deg, 11%, 78%);
 
-    --clr-surface-2: hsl(227deg, 12%, 71%);
-    --clr-surface-1: hsl(225deg, 14%, 77%);
-    --clr-surface-0: hsl(223deg, 16%, 83%);
+    --clr-surface-2: hsl(220deg, 21%, 89%);
+    --clr-surface-1: hsl(220deg, 22%, 92%);
+    --clr-surface-0: hsl(220deg, 23%, 96%);
 
-    --clr-base: hsl(220deg, 23%, 95%);
-    --clr-mantle: hsl(220deg, 22%, 92%);
-    --clr-crust: hsl(220deg, 21%, 89%);
+    --clr-base: hsl(223deg, 16%, 94%);
+    --clr-mantle: hsl(225deg, 14%, 88%);
+    --clr-crust: hsl(227deg, 12%, 82%);
 
     /*** UI Colors ***/
     --clr-primary: var(--clr-blue);
