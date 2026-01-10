@@ -1,0 +1,104 @@
+---
+import Link from '@components/Link.astro';
+
+const { label, icon, links } = Astro.props;
+---
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+
+    width: 100%;
+
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.8ch;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+
+    width: 100%;
+
+    margin: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  h3 > .link-group-header-icon {
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+
+  h3 > .link-group-header-label {
+    position: relative;
+    margin-inline: auto;
+    left: -1rem;
+  }
+
+  div.link-group {
+    position: relative;
+
+    padding: 1rem;
+
+    outline: 2px solid var(--clr-surface-0);
+    border-radius: 4pt;
+    overflow: hidden;
+  }
+
+  div.link-group::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+
+    background-color: var(--clr-base);
+  }
+
+  @media screen and (min-width: 768px) {
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    h3 > .link-group-header-icon {
+      font-size: 2.6rem;
+    }
+  }
+</style>
+
+<div class='link-group'>
+  <h3>
+    <i class={`link-group-header-icon ${icon}`}></i><span
+      class='link-group-header-label'>{label}</span
+    >
+  </h3>
+  <ul>
+    {
+      links.map((link: any) => (
+        <li>
+          <Link
+            url={link.url}
+            label={link.label}
+            external={link.external}
+            icon={link.icon}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</div>

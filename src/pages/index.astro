@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import links from '@content/links.json';
-import Link from '@components/Link.astro';
+import LinkGroup from '@/components/LinkGroup.astro';
 
 const socialLinks = links.social;
 const devLinks = links.dev;
@@ -25,22 +25,6 @@ const communityLinks = links.community;
     scroll-margin-block: 4rem;
   }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.4rem;
-
-    width: 100%;
-
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    width: 100%;
-  }
-
   h1 {
     font-size: 2rem;
 
@@ -50,55 +34,6 @@ const communityLinks = links.community;
     letter-spacing: 0.4ch;
 
     margin: 0;
-  }
-
-  h3 {
-    display: flex;
-    align-items: center;
-    gap: 0.8ch;
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.4rem;
-
-    width: 100%;
-
-    margin: 0;
-    margin-bottom: 1.6rem;
-  }
-
-  h3 > .link-group-header-icon {
-    font-size: 2.2rem;
-    font-weight: 400;
-  }
-
-  h3 > .link-group-header-label {
-    position: relative;
-    margin-inline: auto;
-    left: -1rem;
-  }
-
-  div.link-group {
-    position: relative;
-
-    padding: 1rem;
-
-    outline: 2px solid var(--clr-surface-0);
-    border-radius: 4pt;
-    overflow: hidden;
-  }
-
-  div.link-group::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
-    z-index: -1;
-
-    background-color: var(--clr-base);
   }
 
   div.hero {
@@ -168,14 +103,6 @@ const communityLinks = links.community;
       font-size: 4rem;
     }
 
-    h3 {
-      font-size: 1.75rem;
-    }
-
-    h3 > .link-group-header-icon {
-      font-size: 2.6rem;
-    }
-
     div.hero > p {
       font-size: 1.4rem;
     }
@@ -194,110 +121,14 @@ const communityLinks = links.community;
     <a href='#links' class='btn'>View Links</a>
   </div>
   <section id='links'>
-    <div class='link-group'>
-      <h3>
-        <i class='link-group-header-icon ri-chat-quote-fill'></i><span
-          class='link-group-header-label'>Social</span
-        >
-      </h3>
-      <ul>
-        {
-          socialLinks.map((link) => (
-            <li>
-              <Link
-                url={link.url}
-                label={link.label}
-                external={link.external}
-                icon={link.icon}
-              />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div class='link-group'>
-      <h3>
-        <i class='link-group-header-icon ri-movie-2-fill'></i><span
-          class='link-group-header-label'>Media</span
-        >
-      </h3>
-      <ul>
-        {
-          mediaLinks.map((link) => (
-            <li>
-              <Link
-                url={link.url}
-                label={link.label}
-                external={link.external}
-                icon={link.icon}
-              />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div class='link-group'>
-      <h3>
-        <i class='link-group-header-icon ri-code-box-fill'></i><span
-          class='link-group-header-label'>Development</span
-        >
-      </h3>
-      <ul>
-        {
-          devLinks.map((link) => (
-            <li>
-              <Link
-                url={link.url}
-                label={link.label}
-                external={link.external}
-                icon={link.icon}
-              />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div class='link-group'>
-      <h3>
-        <i class='link-group-header-icon ri-discuss-fill'></i><span
-          class='link-group-header-label'>Community</span
-        >
-      </h3>
-      <ul>
-        {
-          communityLinks.map((link) => (
-            <li>
-              <Link
-                url={link.url}
-                label={link.label}
-                external={link.external}
-                icon={link.icon}
-              />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div class='link-group'>
-      <h3>
-        <i class='link-group-header-icon ri-hand-heart-fill'></i><span
-          class='link-group-header-label'>Support</span
-        >
-      </h3>
-      <ul>
-        {
-          supportLinks.map((link) => (
-            <li>
-              <Link
-                url={link.url}
-                label={link.label}
-                external={link.external}
-                icon={link.icon}
-              />
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+    <LinkGroup label='Social' icon='ri-chat-quote-fill' links={socialLinks} />
+    <LinkGroup label='Media' icon='ri-movie-2-fill' links={mediaLinks} />
+    <LinkGroup label='Development' icon='ri-code-box-fill' links={devLinks} />
+    <LinkGroup
+      label='Community'
+      icon='ri-discuss-fill'
+      links={communityLinks}
+    />
+    <LinkGroup label='Support' icon='ri-hand-heart-fill' links={supportLinks} />
   </section>
 </Layout>
