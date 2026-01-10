@@ -4,6 +4,10 @@ import links from '@content/links.json';
 import LinkGroup from '@/components/LinkGroup.astro';
 
 const { linkGroups } = links;
+
+const enabledLinkGroups = linkGroups.filter((group) => {
+  group.links.some((link) => link.enabled);
+});
 ---
 
 <style>
@@ -118,7 +122,7 @@ const { linkGroups } = links;
   </div>
   <section id='links'>
     {
-      linkGroups.map((group: any) => (
+      enabledLinkGroups.map((group: any) => (
         <LinkGroup label={group.label} icon={group.icon} links={group.links} />
       ))
     }
