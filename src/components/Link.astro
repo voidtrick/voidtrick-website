@@ -4,6 +4,9 @@ const { url, label, icon, external } = Astro.props;
 
 <style>
   a {
+    position: relative;
+    bottom: 0;
+
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -31,12 +34,13 @@ const { url, label, icon, external } = Astro.props;
       0 1px 3px rgba(0, 0, 0, 0.12),
       0 1px 2px rgba(0, 0, 0, 0.24);
 
-    transition-property: background-color, outline, box-shadow;
+    transition-property: background-color, outline, box-shadow, bottom;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
   }
 
   a:hover {
+    bottom: 4px;
     background-color: var(--clr-surface-1);
     outline: 1px solid var(--clr-primary);
 
